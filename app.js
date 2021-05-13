@@ -73,6 +73,8 @@ app.post("/register", async (req, res) => {
   // console.log(users);
 });
 
+
+//Route Authentication
 function checkAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
     return next();
@@ -86,6 +88,5 @@ function checkLogin(req, res, next) {
   }
   return next();
 }
-
 
 app.listen(4000);
